@@ -1,10 +1,6 @@
-name = "id-photo-bg-changer"
+name = "id-photo-bg-changer-worker"
 main = "worker/index.js"
 compatibility_date = "2024-01-01"
 
 [vars]
 # Set REMOVE_BG_API_KEY via: wrangler secret put REMOVE_BG_API_KEY
-
-[[routes]]
-pattern = "yourdomain.com/api/*"
-zone_name = "yourdomain.com"
