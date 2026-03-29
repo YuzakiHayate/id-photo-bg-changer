@@ -73,9 +73,7 @@ export default function HomePage() {
       const formData = new FormData()
       formData.append('image_file', file)
 
-      const workerUrl = process.env.NEXT_PUBLIC_WORKER_URL
-      const apiUrl = workerUrl ? `${workerUrl}/api/remove-bg` : '/api/remove-bg'
-      const res = await fetch(apiUrl, {
+      const res = await fetch('/api/remove-bg', {
         method: 'POST',
         body: formData,
       })
